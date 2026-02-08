@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Riber Group Tech</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="icon" href="favicon.png" type="image/png">
+</head>
+<script>
+function revealOnScroll() {
+  const reveals = document.querySelectorAll(".reveal");
+
+  reveals.forEach(el => {
+    const windowHeight = window.innerHeight;
+    const elementTop = el.getBoundingClientRect().top;
+    const elementVisible = 100;
+
+    if (elementTop < windowHeight - elementVisible) {
+      el.classList.add("active");
+    }
+  });
+}
+
+window.addEventListener("scroll", revealOnScroll);
+revealOnScroll();
+</script>
+
+<body>
+
+  <!-- NAVBAR -->
+  <header class="navbar">
+    <div class="container nav-content">
+       <div class="logo">
+        <img src="logo.png">
+        <span class="logo-text">Riber Group Tech</span>
+       </div>
+      <nav>
+        <a href="#servicos">Serviços</a>
+        <a href="#sobre">Sobre</a>
+        <a href="#contato">Contato</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container">
+      <h1 class="hero-title">Tecnologia sem complicação</h1>
+      <p>Montagem, limpeza, formatação e suporte digital profissional.</p>
+      <a class="btn" href="https://wa.me/5524998674059" target="_blank">
+        Solicitar orçamento
+      </a>
+    </div>
+  </section>
+
+  <!-- SERVIÇOS -->
+  <section class="services" id="servicos">
+    <div class="container">
+      <h2>Nossos serviços</h2>
+
+      <div class="cards">
+        <div class="card">
+          <h3>Montagem de PC</h3>
+          <p>Computadores montados com organização, desempenho e segurança.</p>
+        </div>
+
+        <div class="card">
+          <h3>Limpeza completa</h3>
+          <p>Limpeza interna, externa e troca de pasta térmica.</p>
+        </div>
+
+        <div class="card">
+          <h3>Formatação</h3>
+          <p>Instalação de sistema, drivers e configuração do zero.</p>
+        </div>
+
+        <div class="card">
+          <h3>Criação de Sites</h3>
+          <p>Sites profissionais, rápidos e responsivos  
+    para empresas, lojas e profissionais.</p>
+        </div>
+  </section>
+
+  <!-- SOBRE -->
+  <section class="about" id="sobre">
+    <div class="container">
+      <h2>Sobre a Riber</h2>
+      <p>
+        A Riber Group Tech atua com foco em qualidade, transparência e soluções
+        práticas para quem precisa de tecnologia funcionando de verdade.
+      </p>
+    </div>
+  </section>
+
+  <!-- CTA FINAL -->
+  <section class="cta">
+    <div class="container">
+      <h2 class="hero-subtitle">Seu PC merece mais desempenho</h2>
+      <a class="btn btn-light" href="https://wa.me/5524998674059" target="_blank">
+        Falar no WhatsApp
+      </a>
+    </div>
+  </section>
+
+  <section class="formulario" id="contato">
+  <div class="container">
+    <h2>FALE COM A RIBER</h2>
+
+    <form onsubmit="enviarWhats(event)">
+      <input type="text" id="nome" placeholder="Seu nome" required>
+      <textarea id="mensagem" placeholder="O que você precisa?" required></textarea>
+      <button type="submit" class="btn">Enviar no WhatsApp</button>
+    </form>
+  </div>
+</section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2026 Riber Group Tech</p>
+    <div class="social">
+      <a href="https://instagram.com/ribergrouptech" target="_blank">Instagram</a>
+      <a href="https://wa.me/5524998674059" target="_blank">WhatsApp</a>
+    </div>
+  </footer>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const cards = document.querySelectorAll('.card');
+
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('show');
+          observer.unobserve(entry.target); // anima só uma vez
+        }
+      });
+    }, { threshold: 0.2 });
+
+    cards.forEach(card => observer.observe(card));
+  });
+</script>
+
+</body>
+</html>
+<h1>Montagem, limpeza & soluções digitais</h1>
+<p>
+Do hardware ao site para você ou sua empresa.  
+Tecnologia profissional, sem enrolação. - Deus é Fiel.
+</p>
+
+<script>
+function enviarWhats(e) {
+  e.preventDefault();
+
+  const nome = document.getElementById("nome").value;
+  const msg = document.getElementById("mensagem").value;
+
+  const texto = `Olá, me chamo ${nome}.%0A%0A${msg}`;
+  const numero = "5524998674059";
+
+  window.open(`https://wa.me/${numero}?text=${texto}`, "_blank");
+}
+</script>
