@@ -132,10 +132,26 @@ revealOnScroll();
   <div class="container">
     <h2>FALE COM A RIBER</h2>
 
-    <form onsubmit="enviarWhats(event)">
+    <form id="formContato">
+
       <input type="text" id="nome" placeholder="Seu nome" required>
-      <textarea id="mensagem" placeholder="O que você precisa?" required></textarea>
+
+      <select id="servico" required>
+        <option value="">O que você precisa?</option>
+        <option value="Montagem de PC">Montagem de PC</option>
+        <option value="Limpeza">Limpeza</option>
+        <option value="Formatação">Formatação</option>
+        <option value="Criação de Site">Criação de Site</option>
+      </select>
+
+      <!-- CAMPO CONFIG PC -->
+      <textarea id="configPC" placeholder="Liste as peças do seu PC (processador, placa-mãe, RAM, placa de vídeo, fonte...)" style="display:none;"></textarea>
+
+      <!-- CAMPO DETALHES SITE -->
+      <textarea id="detalhesSite" placeholder="Descreva como você quer o seu site..." style="display:none;"></textarea>
+
       <button type="submit" class="btn">Enviar no WhatsApp</button>
+
     </form>
   </div>
 </section>
@@ -163,6 +179,58 @@ revealOnScroll();
     }, { threshold: 0.2 });
 
     cards.forEach(card => observer.observe(card));
+  });
+</script>
+
+<script>
+  const servicoSelect = document.getElementById("servico");
+  const configPC = document.getElementById("configPC");
+  const detalhesSite = document.getElementById("detalhesSite");
+  const form = document.getElementById("formContato");
+
+  servicoSelect.addEventListener("change", function() {
+
+    // Resetar tudo
+    configPC.style.display = "none";
+    detalhesSite.style.display = "none";
+    configPC.required = false;
+    detalhesSite.required = false;
+
+    if (this.value === "Montagem de PC") {
+      configPC.style.display = "block";
+      configPC.required = true;
+    }
+
+    if (this.value === "Criação de Site") {
+      detalhesSite.style.display = "block";
+      detalhesSite.required = true;
+    }
+
+  });
+
+  form.addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    const nome = document.getElementById("nome").value;
+    const servico = servicoSelect.value;
+    const config = configPC.value;
+    const detalhes = detalhesSite.value;
+
+    let mensagem = `Olá, meu nome é ${nome}.%0A`;
+    mensagem += `Tenho interesse em: ${servico}.%0A`;
+
+    if (servico === "Montagem de PC") {
+      mensagem += `Configuração do PC:%0A${config}`;
+    }
+
+    if (servico === "Criação de Site") {
+      mensagem += `Detalhes do site:%0A${detalhes}`;
+    }
+
+    const numero = "5524998674059";
+    const url = `https://wa.me/${numero}?text=${mensagem}`;
+
+    window.open(url, "_blank");
   });
 </script>
 
