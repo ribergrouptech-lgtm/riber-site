@@ -45,3 +45,90 @@
 .platform-orbit{position:absolute;border:1px solid rgba(83,166,245,.23);border-radius:50%;width:240px;height:100px;transform:rotate(-24deg)}.orbit-two{width:300px;height:150px;transform:rotate(42deg);border-color:rgba(64,204,255,.14)}
 .project-card-copy{display:flex;justify-content:space-between;align-items:flex-end;gap:15px;padding:18px 19px 20px}.project-type{font-size:8px;letter-spacing:1.1px;color:#69baff}.project-card-copy h3{font:700 16px var(--display);margin:7px 0 0;color:#e8f2ff}.project-card-copy p{max-width:165px;text-align:right;font-size:10px;line-height:1.65;color:#879ab2;margin:0}.projects-note{margin:16px 0 0;font-size:9px;line-height:1.7;color:#72859f}
 @media(max-width:700px){.projects-grid{grid-template-columns:1fr;gap:14px}.project-art{height:245px}.project-card-copy{align-items:flex-start;flex-direction:column;gap:8px}.project-card-copy p{text-align:left;max-width:none}}
+
+
+/* NOVA DIREÇÃO VISUAL — linguagem de portfolio digital premium */
+:root{--bg:#070a12;--bg2:#0a1020;--panel:#0e1728;--blue:#4b8dff;--cyan:#73e0ff;--line:rgba(148,177,220,.15)}
+body{background:#070a12}
+.header{background:rgba(7,10,18,.78);border-bottom-color:rgba(147,177,220,.09)}
+.brand img{filter:drop-shadow(0 0 12px rgba(63,160,255,.24))}
+.nav{gap:29px}
+.nav>a:not(.nav-cta){position:relative;transition:color .2s}
+.nav>a:not(.nav-cta):after{content:"";position:absolute;left:0;right:100%;bottom:-8px;height:1px;background:linear-gradient(90deg,#54baff,#8c78ff);transition:right .25s}
+.nav>a:not(.nav-cta):hover:after{right:0}
+.nav-cta{border-radius:999px;padding:11px 18px;background:rgba(68,139,255,.08)}
+.hero{min-height:735px;padding-top:118px;background:radial-gradient(ellipse at 76% 40%,rgba(65,112,255,.18),transparent 34%),radial-gradient(ellipse at 4% 90%,rgba(36,201,255,.09),transparent 33%),#070a12}
+.hero-grid{opacity:.14;background-size:76px 76px;mask-image:radial-gradient(ellipse at 68% 44%,#000,transparent 70%)}
+.hero h1{font-size:clamp(56px,7.4vw,94px);line-height:1.01;letter-spacing:-6px;margin:28px 0 24px;max-width:720px}
+.gradient-text{background:linear-gradient(100deg,#f8fbff 0%,#a6c8ff 32%,#5b9cff 66%,#7de6ff 100%);background-size:180% auto;animation:gradientFlow 7s ease-in-out infinite alternate}
+@keyframes gradientFlow{from{background-position:0% center}to{background-position:100% center}}
+.eyebrow{font-size:9px;letter-spacing:2.6px;color:#a6bad6}
+.status-dot{background:#7ce4c0;box-shadow:0 0 15px #7ce4c0}
+.hero-lead{font-size:15px;max-width:465px;color:#9eacc2}
+.button{border-radius:999px;padding:15px 22px}
+.button-primary{background:linear-gradient(110deg,#367cf5,#4ba9ff);box-shadow:0 8px 28px rgba(49,126,255,.2)}
+.text-link{font-size:12px}
+.hero-proof{margin-top:54px}
+.hero-visual{height:485px}
+.visual-window{border-radius:17px;border-color:rgba(130,178,255,.25);background:linear-gradient(145deg,rgba(18,31,54,.96),rgba(7,13,25,.97));box-shadow:0 40px 100px rgba(0,0,0,.5),0 0 80px rgba(57,129,255,.12)}
+.phone-card{border-radius:23px;border-color:rgba(130,190,255,.7);box-shadow:0 25px 65px #0008,0 0 35px rgba(67,154,255,.12)}
+.float-chip{border-radius:999px;background:rgba(11,20,36,.88);backdrop-filter:blur(12px);border-color:rgba(116,174,242,.2);font-size:9px}
+.hero-bottom{margin-top:65px}
+.section-pad{padding:125px 0}
+.intro{background:linear-gradient(180deg,#0a101d,#080d18);border-color:rgba(255,255,255,.045)}
+.intro h2,.section-heading h2,.about-copy h2,.contact-copy h2{letter-spacing:-2.5px}
+.intro h2 span,.about-copy h2 span,.contact-copy h2 span{background:linear-gradient(100deg,#8bc7ff,#6ce0ff);-webkit-background-clip:text;background-clip:text;color:transparent}
+.services{background:#070a12}
+.section-heading h2{font-size:clamp(38px,4.5vw,54px)}
+.service-grid{gap:14px}
+.service-card{border-radius:15px;min-height:365px;padding:28px;background:linear-gradient(145deg,rgba(17,29,49,.78),rgba(9,16,29,.92));position:relative;overflow:hidden}
+.service-card:before{content:"";position:absolute;inset:0;opacity:0;background:radial-gradient(circle at 80% 0%,rgba(63,145,255,.18),transparent 55%);transition:opacity .3s;pointer-events:none}
+.service-card:hover:before{opacity:1}
+.service-card>*{position:relative}
+.service-featured{border-color:rgba(75,150,255,.34)}
+.card-icon{border-radius:10px;background:rgba(70,145,255,.08)}
+.card-link{font-size:11px}
+.secondary-service{border-radius:13px;background:rgba(13,23,39,.7);border-color:rgba(135,170,218,.13)}
+.projects{background:#080d18}
+.project-card{border-radius:15px;background:linear-gradient(145deg,#101d30,#090f1b)}
+.project-art{height:300px}
+.project-art-label{border-radius:999px}
+.process{background:linear-gradient(180deg,#090f1b,#080d18)}
+.process-step{border-top-color:rgba(130,166,216,.2)}
+.process-step>span{color:#6dafff}
+.about{background:#080d18}
+.about-art{border-radius:22px;background:radial-gradient(circle at 50% 50%,rgba(44,116,255,.18),transparent 58%),linear-gradient(145deg,#101b30,#080d18);border:1px solid rgba(130,170,225,.12)}
+.about-logo{filter:drop-shadow(0 0 28px rgba(51,145,255,.3))}
+.contact{background:radial-gradient(ellipse at 80% 40%,rgba(44,112,230,.13),transparent 40%),#0a101d}
+.contact-form{border-radius:18px;background:linear-gradient(145deg,rgba(17,30,51,.94),rgba(9,16,29,.96));border-color:rgba(133,176,235,.2)}
+.contact-form input,.contact-form select,.contact-form textarea{border-radius:9px;background:#080f1c}
+.submit-button{border-radius:999px}
+.footer{background:#060910}
+.whatsapp-float{box-shadow:0 10px 35px rgba(37,211,102,.2)}
+/* Stack: apresentação visual inspirada em páginas de portfólio e tecnologia */
+.stack-section{position:relative;overflow:hidden;background:radial-gradient(ellipse at 50% 38%,rgba(43,100,210,.13),transparent 42%),linear-gradient(180deg,#090f1b,#070a12);border-top:1px solid rgba(255,255,255,.04);border-bottom:1px solid rgba(255,255,255,.04)}
+.stack-head{display:flex;justify-content:space-between;align-items:flex-end;gap:40px;margin-bottom:46px}
+.stack-head h2{font:750 clamp(36px,4.5vw,54px)/1.17 var(--display);letter-spacing:-2.5px;margin:0}
+.stack-showcase{height:285px;position:relative;display:flex;align-items:center;justify-content:center;overflow:hidden;border:1px solid rgba(123,169,231,.13);border-radius:20px;background:radial-gradient(ellipse at center,rgba(47,117,222,.13),transparent 50%),rgba(10,18,32,.55)}
+.stack-showcase:before{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(115,164,226,.045) 1px,transparent 1px),linear-gradient(90deg,rgba(115,164,226,.045) 1px,transparent 1px);background-size:35px 35px;mask-image:radial-gradient(ellipse at center,#000,transparent 75%)}
+.stack-orbit{position:absolute;width:300px;height:170px;border:1px solid rgba(90,168,255,.2);border-radius:50%;transform:rotate(-24deg);animation:orbitFloat 12s ease-in-out infinite alternate}
+.stack-orbit-b{width:440px;height:210px;transform:rotate(27deg);border-color:rgba(101,222,255,.13);animation-delay:-5s}
+@keyframes orbitFloat{from{transform:rotate(-24deg) scale(.94)}to{transform:rotate(24deg) scale(1.06)}}
+.stack-core{position:relative;z-index:2;width:116px;height:116px;border-radius:30px;border:1px solid rgba(124,187,255,.36);background:linear-gradient(145deg,rgba(26,53,91,.95),rgba(8,16,31,.98));box-shadow:0 0 65px rgba(54,138,255,.2),inset 0 0 25px rgba(75,159,255,.1);display:flex;align-items:center;justify-content:center;gap:6px;transform:rotate(-5deg)}
+.stack-core img{width:47px;height:47px;object-fit:contain}.stack-core span{font:800 11px/1.1 var(--display);letter-spacing:1px}.stack-core small{font-size:7px;color:#8fbbe9;letter-spacing:1.5px}
+.stack-label{position:absolute;z-index:3;padding:10px 14px;border:1px solid rgba(130,178,235,.18);border-radius:999px;background:rgba(7,14,26,.82);backdrop-filter:blur(10px);font-size:9px;letter-spacing:1.3px;color:#b8cce7;box-shadow:0 10px 30px #0004}
+.stack-label i{display:inline-block;width:6px;height:6px;border-radius:50%;background:#6acfff;box-shadow:0 0 10px #6acfff;margin-right:8px}
+.stack-label-a{top:48px;left:14%}.stack-label-b{right:12%;top:65px}.stack-label-c{bottom:42px;left:50%;transform:translateX(-50%)}
+.stack-groups{display:grid;grid-template-columns:repeat(3,1fr);gap:13px;margin-top:15px}
+.stack-group{display:flex;gap:16px;padding:23px 21px;border:1px solid rgba(133,171,223,.13);border-radius:14px;background:linear-gradient(145deg,rgba(15,26,44,.82),rgba(8,14,25,.86));transition:transform .25s,border-color .25s}
+.stack-group:hover{transform:translateY(-4px);border-color:rgba(90,164,255,.38)}
+.stack-group-index{font:700 10px var(--display);color:#6fb7ff;letter-spacing:1px;padding-top:4px}
+.stack-group h3{font:700 15px var(--display);margin:0 0 7px}.stack-group p{font-size:11px;line-height:1.7;color:#8f9fb6;margin:0 0 15px}
+.stack-tags{display:flex;flex-wrap:wrap;gap:6px}.stack-tags span{padding:5px 8px;border-radius:5px;background:rgba(74,137,222,.09);border:1px solid rgba(104,164,239,.13);font-size:8px;color:#b7cce6;letter-spacing:.3px}
+@media(max-width:900px){.stack-groups{grid-template-columns:1fr}.stack-head{display:block}.stack-head .heading-note{margin-top:16px}.stack-group{padding:19px}}
+@media(max-width:700px){.hero{padding-top:84px;min-height:auto}.hero h1{font-size:clamp(48px,13vw,70px);letter-spacing:-3.8px}.hero-proof{margin-top:38px}.hero-bottom{margin-top:36px}.section-pad{padding:82px 0}.stack-showcase{height:230px}.stack-core{width:94px;height:94px;border-radius:24px}.stack-core img{width:37px;height:37px}.stack-label{font-size:7px;padding:8px 10px;letter-spacing:.8px}.stack-label-a{left:4%;top:32px}.stack-label-b{right:3%;top:37px}.stack-label-c{bottom:25px}.stack-groups{grid-template-columns:1fr}.stack-group{gap:13px}.service-card{min-height:320px}}
+@media(prefers-reduced-motion:reduce){.gradient-text,.stack-orbit{animation:none}}
+
+
+/* FIX V5: evita o bloco branco no destaque do título em navegadores sem suporte consistente a background-clip:text */
+.hero h1 .gradient-text{background:none!important;background-image:none!important;background-clip:border-box!important;-webkit-background-clip:border-box!important;color:#78cfff!important;-webkit-text-fill-color:#78cfff!important;text-shadow:0 0 28px rgba(75,160,255,.18);}
